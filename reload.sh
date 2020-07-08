@@ -1,0 +1,1 @@
+docker exec -d lebonpoc-front-vanilla nginx -s reload -c /conf/nginx/nginx.conf
