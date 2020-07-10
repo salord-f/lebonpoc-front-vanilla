@@ -1,8 +1,18 @@
-function component() {
-    const element = document.createElement('div');
-    element.innerHTML = 'Hello LeBonPOC';
-    return element;
+class HomePage extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({mode: 'open'});
+        this.shadowRoot.innerHTML = `
+        <div>lebonpoc HomePage</div>
+        `
+    }
+    connectedCallback() {
+        console.log('HomePage connected');
+    }
+
+    disconnectedCallback() {
+        console.log('HomePage disconnected');
+    }
 }
 
-
-document.body.appendChild(component());
+customElements.define('home-page', HomePage);

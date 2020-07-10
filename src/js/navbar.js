@@ -21,6 +21,11 @@ class Navbar extends HTMLElement {
                 letter-spacing: 3px;
             }
             
+            .logo-link {
+                color: #ccc;
+                text-decoration: none; /* no underline */
+            }
+            
             .nav {
                 display: flex;
                 justify-content: space-around;
@@ -70,12 +75,11 @@ class Navbar extends HTMLElement {
             }
         </style>
         <div class="nav-bar">
-            <h1 class="logo">lebonpoc</h1>
+            <a class="logo-link" href="/"><h1 class="logo">lebonpoc</h1></a>
             <ul class="nav">
-                <li class="nav-link"><a href="#home">Home</a></li>
-                <li class="nav-link"><a href="#about">About</a></li>
-                <li class="nav-link"><a href="#projects">Projects</a></li>
-                <li class="nav-link"><a href="#contact">Contact</a></li>
+                <li class="nav-link"><a href="/add.html">Add</a></li>
+                <li class="nav-link"><a href="/search.html">Search</a></li>
+                <li class="nav-link"><a href="/about">About</a></li>
             </ul>
             <div class="burger">
                 <i class="fas fa-bars"></i>
